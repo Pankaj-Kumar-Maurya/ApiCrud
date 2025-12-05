@@ -4,14 +4,14 @@ namespace ApiCrud.Models
 {
     public class tblContact
     {
-        int ContactID { get; set; }
+        [Key]
+        public int ContactID { get; set; }
+         [Required]
+        public string? Name { get; set; }
+        public string? City { get; set; }
         [Required]
-        string? Name { get; set; }
-        string? City { get; set; }
-        [Required]
-        string? Email { get; set; }
-        DateTime DOB { get; set; }
-        string? ContactNo { get; set; }
-       
+        public string? Email { get; set; }
+        public DateTime DOB { get; set; }
+        public string? ContactNo { get; set; }       
     }
 }
